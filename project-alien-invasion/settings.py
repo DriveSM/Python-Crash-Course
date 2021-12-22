@@ -14,6 +14,7 @@ class Settings:
         self.screen_width = 1200
         self.screen_height = 800
         self.bg_color = (0, 59, 89)
+        self.fps = 60
 
 
 def main():

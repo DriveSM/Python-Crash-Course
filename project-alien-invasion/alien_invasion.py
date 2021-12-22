@@ -20,11 +20,12 @@ class AlienInvasion:
         """Инициализирует игру и создает игровые ресурсы."""
         pygame.init()
         self.settings = Settings()
+        self.clock = pygame.time.Clock()
         
         self.screen = pygame.display.set_mode(
             (self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption('Alien Invasion')
-
+        
         self.ship = Ship(self)
         
         # Назначение цвета фона.
@@ -44,6 +45,8 @@ class AlienInvasion:
             
             # Отображение последнего прорисованног экрана.
             pygame.display.flip()
+            
+            self.clock.tick(self.settings.fps)  # 60 fps
 
 
 def main():

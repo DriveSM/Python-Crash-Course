@@ -17,6 +17,7 @@ class Ship:
         
         # Загружает изображение корабля и получает прямоугольник
         self.image = pygame.image.load(r'images/space-invaders.png')
+        self.image = pygame.transform.scale(self.image, (50, 50))
         self.rect = self.image.get_rect()
         
         # Каждый новый корабль появляется у нижнего края экрана
@@ -25,6 +26,7 @@ class Ship:
     def blitme(self):
         """Рисует корабль в текущей позиции."""
         self.screen.blit(self.image, self.rect)
+
 
 def main():
     pass
