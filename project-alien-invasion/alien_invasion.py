@@ -23,8 +23,11 @@ class AlienInvasion:
         self.clock = pygame.time.Clock()
         
         self.screen = pygame.display.set_mode(
-            (self.settings.screen_width, self.settings.screen_height))
+            (self.settings.screen_width, self.settings.screen_height),
+            pygame.DOUBLEBUF | pygame.HWACCEL | pygame.HWSURFACE)
         pygame.display.set_caption('Alien Invasion')
+        pygame.display.set_icon(pygame.image.load(
+            r'images/ship.bmp'))
         
         self.ship = Ship(self)
         
