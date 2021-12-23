@@ -15,6 +15,8 @@ class Settings:
         self.screen_height = 800
         self.bg_color = (0, 59, 89)
         self.fps = 60
+        # настройки корабля
+        self.ship_vel = 4.5
 
 
 def main():
